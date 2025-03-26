@@ -1,0 +1,366 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+header {
+    position: sticky;
+    top: 0;
+    background: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffc107;
+}
+
+header .cta {
+    padding: 8px 15px;
+    background: #ffc107;
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+header .cta:hover {
+    background: white;
+    color: #0d6efd;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url("./images/Umra hero section.webp") no-repeat center center/cover;
+    height: 60vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    z-index: 1;
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.hero {
+    position: relative;
+    background: url("./images/Umra hero section.webp") no-repeat center center/cover;
+    height: 60vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+    z-index: 1; /* Lower than the button */
+}
+
+.hero h1,
+.hero p,
+.hero .btn-primary {
+    position: relative; /* Ensures they appear above the shadow */
+    z-index: 2;
+}
+
+.btn-primary {
+    top:2 0px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: #ffc107;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+
+
+/* Umrah Packages Section */
+.umrah-packages {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+}
+
+.umrah-packages h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: #d48806;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.package-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.package {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.package h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.package p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.package .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d48806;
+    margin-bottom: 20px;
+}
+
+.package .btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.package .btn-secondary:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .package-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package {
+        max-width: 100%;
+    }
+}
+
+
+
+/* About Section */
+/* About Our Umrah Service Section */
+.about-umrah {
+    padding: 60px 20px;
+    background-color: #fff5e6; /* Soft, warm background tone */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.about-umrah h2 {
+    font-size: 2.8rem;
+    color: #d48806; /* Rich gold-like tone */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-umrah p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-umrah .highlight {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.about-umrah .cta-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-umrah .cta-button:hover {
+    background-color: #d47d00;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+.toggle-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.toggle-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    
+    header nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #0d6efd;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+}
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            header nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pak Faisal Travel and Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #0d6efd;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ffc107;
+        }
+
+        header .cta {
+            padding: 8px 15px;
+            background: #ffc107;
+            color: black;
+            font-weight: 600;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header .cta:hover {
+            background: white;
+            color: #0d6efd;
+        }
+
+        .hero {
+            background: url('./images/hero.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0 20px;
+            z-index: 2;
+        }
+
+        .hero .buttons {
+            z-index: 2;
+        }
+
+        .hero .buttons a {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background: #ffc107;
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .hero .buttons a:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #0d6efd;
+        }
+
+        .cards {
+            display:flex;
+            gap: 20px;
+            justify-content: space-evenly;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 500px;
+            margin: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            padding: 15px;
+            font-size: 1.2rem;
+            color: #0d6efd;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #0d6efd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Mobile menu toggle button */
+.toggle-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.toggle-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #0d6efd;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+}
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            header nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero .buttons{
+                width: fit-content;
+                text-align: center;
+                font-size: 9px;
+                
+                
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cards {
+               flex-direction: column;
+               text-align: center;
+            }
+            .card{
+                width: 95%;
+                justify-content: center;
+            }
+
+            .hero {
+                height: 80vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .cards {
+                gap: 10px;
+            }
+
+            header nav a {
+                font-size: 0.9rem;
+            }
+
+            .hero .buttons a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">Pak Faisal Travel and Tours</div>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">International Tours</a>
+            <a href="#">Domestic Tours</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <div class="toggle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <a href="#" class="cta">Book Now</a>
+    </header>
+
+    <div class="hero">
+        <h1>Your Journey to the Sacred Lands Starts Here</h1>
+        <p>Explore Hassle-Free Umrah & Hajj Tours</p>
+        <div class="buttons">
+            <a href="#"> Umrah Packages</a>
+            <a href="#">Plan Your Hajj</a>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>Explore International Tours</h2>
+        <div class="cards">
+           <a href="Umra.html"> <div class="card">
+                <img src="./images/DALL·E 2025-01-23 15.25.09 - A serene and captivating image of a spiritual Umrah journey. The scene depicts pilgrims in white Ihram garments walking towards the Kaaba in Mecca's M.webp" alt="Turkey">
+                <h3>Umrah</h3>
+            </div></a>
+            <div class="card">
+                <img src="./images/DALL·E 2025-01-23 15.26.54 - An awe-inspiring image of Hajj-e-Akbar. The scene showcases a vast crowd of pilgrims in white Ihram garments gathered around the Kaaba in Mecca's Masj.webp" alt="UAE">
+                <h3>Hajj e Akber</h3>
+            </div>
+            </div>
+            <div class="cards">
+            <div class="card">
+                <img src="./images/tickets.webp" alt="Saudi Arabia">
+                <h3>Tickets all over World.</h3>
+            </div>
+           
+        
+        <div class="card">
+            <img src="./images/tour.jpg" alt="Saudi Arabia">
+            <h3>Tours(International/Domestic).</h3>
+
+        </div>
+        
+    </section>
+
+    <section class="section">
+        <h2>Discover Local Destinations</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="./images/faisal masjid.jpg" alt="Badshahi Mosque">
+                <h3>Islamabad</h3>
+            </div>
+            <div class="card">
+                <img src="./images/badshai masjid.jpg" alt="Shah Faisal Mosque">
+                <h3>Punjab </h3>
+            </div>
+            <div class="card">
+                <img src="./images/khyber pass.jpg" alt="Shah Faisal Mosque">
+                <h3>Khyber Pakhton Khwan </h3>
+            </div>
+            <div class="card">
+                <img src="./images/Mazar e quaid.jpg" alt="Shah Faisal Mosque">
+                <h3>Sindh </h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Travel with Pak Faisal Travel and Tours. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
